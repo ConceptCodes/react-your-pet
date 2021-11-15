@@ -8,7 +8,7 @@ const navItems = [
 
 function Header() {
     return (
-        <header class="bg-transparent flex items-center justify-between">
+        <header className="bg-transparent flex items-center justify-between">
             <div className="font-medium text-3xl">Yourpet<span className="text-blue-600">.</span></div>
             <ul className="flex space-x-10">
                 {

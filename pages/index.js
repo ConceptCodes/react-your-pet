@@ -157,15 +157,15 @@ export default function Home() {
           </div>
           <section className="hidden md:inline-block flex-col mt-20 p-10 items-center space-y-10 space-x-0 rounded-xl bg-blue-500">
             <div className="text-4xl text-white text-center font-medium">Subscribe to our blog</div>
-            <div class="search-box mx-auto my-auto w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
-              <form class="flex flex-row">
+            <div className="search-box mx-auto my-auto w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
+              <form className="flex flex-row">
                 <input
-                  class="h-16 bg-gray-100 text-grey-darker rounded-xl rounded-r-none text-grey-darkest border border-gray-100 font-bold w-full py-1 px-2 outline-none text-lg text-gray-600"
+                  className="h-16 bg-gray-100 text-grey-darker rounded-xl rounded-r-none text-grey-darkest border border-gray-100 font-bold w-full py-1 px-2 outline-none text-lg text-gray-600"
                   type="text"
                   placeholder="Enter your email address"
                 />
-                <span class="flex items-center bg-gray-100 rounded-xl rounded-l-none border-0 px-3 font-bold text-grey-100">
-                  <button class="bg-blue-800 hover:bg-gredient-light text-lg text-white font-bold py-3 px-6 rounded">
+                <span className="flex items-center bg-gray-100 rounded-xl rounded-l-none border-0 px-3 font-bold text-grey-100">
+                  <button className="bg-blue-800 hover:bg-gredient-light text-lg text-white font-bold py-3 px-6 rounded">
                     Subscribe
                   </button>
                 </span>
