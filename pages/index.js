@@ -52,7 +52,7 @@ export default function Home() {
         <section className="p-10 bg-blue-100">
           <Header />
           <div className="flex justify-between pt-20">
-            <div className="space-y-10">
+            <div className=" flex flex-col space-y-10">
               <div className="text-blue-800 font-bold capitalize">
                 <MinusIcon className="inline-block text-blue-800 w-10" />
                 veterinary clinic
@@ -74,7 +74,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="hidden lg:inline-block">
               <Image
                 src="https://via.placeholder.com/500"
                 width={500}
@@ -86,36 +86,38 @@ export default function Home() {
         <section className="p-20 bg-blue-200">
           <div className="flex justify-between py-5">
             <div className="text-4xl font-medium mb-14">
-              Which services do provide?
+              Which services do we provide?
             </div>
-            <div className="text-gray-500 text-xl">
+            <div className="hidden lg:inline-block text-gray-500 text-xl">
               We are your service with all our services <br /> and personalities
               you need.
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
           </div>
         </section>
-        <section className="bg-blue-100 p-20 flex justify-between">
-          <Image
-            src="https://via.placeholder.com/500"
-            width={500}
-            height={500}
-          />
-          <div className="flex flex-col space-y-4">
-            <div className="text-6xl font-medium text-left">
-              The Best Veterinarians in <br /> All Branches
+        <section className="bg-blue-100 p-20 space-x-10 flex justify-between">
+          <div  className="hidden lg:inline-block">
+            <Image
+              src="https://via.placeholder.com/500"
+              width={500}
+              height={500}
+            />
+          </div>
+          <div className="flex flex-col items-center lg:items-start space-y-4">
+            <div className="text-6xl font-medium text-center lg:text-left">
+              The Best Veterinarians in <br className="hidden lg:inline-block" /> All Branches
             </div>
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-left">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore.
             </p>
-            <div className="flex">
-              <button className="px-8 py-4 capitalize rounded-lg text-white bg-blue-500">
+            <div className="flex items-start">
+              <button className="px-8 py-2 capitalize rounded-lg text-white bg-blue-500">
                 contact us
               </button>
             </div>
@@ -126,11 +128,11 @@ export default function Home() {
             <div className="font-medium text-4xl">
               What do our patients say?
             </div>
-            <div className="text-gray-500">
+            <div className="hidden lg:inline-block text-gray-500">
               You can see the comments and scores of our patients
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="flex overflow-x-auto lg:grid lg:grid-cols-3 lg:gap-4">
             {reviews.map((x, index) => (
               <ReviewCard key={index} review={x} />
             ))}
@@ -142,17 +144,19 @@ export default function Home() {
               Our high qualified veterinarians
             </div>
             <div className="flex space-x-3 items-center capitalize">
-              <div className="text-blue-800 font-medium">See all</div>
-              <ArrowRightIcon className="text-blue-800 h-5 "></ArrowRightIcon>
+              <div className="hidden md:flex md:space-x-5 items-center">
+                <div className="flex text-blue-800 font-medium">See all</div>
+                <ArrowRightIcon className="text-blue-800 h-5 "></ArrowRightIcon>
+              </div>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex overflow-x-auto lg:grid lg:grid-cols-3 lg:gap-4">
             {vets.map((x, index) => (
               <Vet key={index} name={x} />
             ))}
           </div>
-          <section className="flex flex-col mt-20 p-10 items-center space-y-10 rounded-xl bg-blue-500">
-            <div className="text-4xl text-white font-medium">Subscribe to our blog</div>
+          <section className="hidden md:inline-block flex-col mt-20 p-10 items-center space-y-10 space-x-0 rounded-xl bg-blue-500">
+            <div className="text-4xl text-white text-center font-medium">Subscribe to our blog</div>
             <div class="search-box mx-auto my-auto w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
               <form class="flex flex-row">
                 <input
