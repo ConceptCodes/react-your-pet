@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const navItems = [
     'home',
     'services',
@@ -12,13 +10,13 @@ function Header() {
     return (
         <header class="bg-transparent flex items-center justify-between">
             <div className="font-medium text-3xl">Yourpet<span className="text-blue-600">.</span></div>
-            <div className="flex">
+            <ul className="flex space-x-10">
                 {
                     navItems.map((x, index) => (
-                        <div key={index} className="capitalize text-xl text-gray-600 mr-10">{x}</div>
+                        <li key={index} className="capitalize text-xl cursor-pointer hover:text-blue-600 hover:font-medium text-gray-600">{x}</li>
                     ))
                 }
-            </div>
+            </ul>
         </header>
     )
 }
