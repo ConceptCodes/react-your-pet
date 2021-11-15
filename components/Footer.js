@@ -1,17 +1,49 @@
+
+const items = [
+  {
+    title: "product",
+    items: ["download", "location", "services", "address", "map", "pricing"],
+  },
+  {
+    title: "community",
+    items: ["accesibility", "frontline", "gift", "quest", "about us", "contact", "center"],
+  },
+  {
+    title: "about",
+    items: ["investors", "careers", "founders", "work", "newsroom"],
+  },
+];
+
 function Footer() {
-    return (
-        <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    )
+  return (
+    <footer className="flex justify-between mt-20 text-gray-500">
+      <div className="flex flex-col">
+        <div className="font-bold text-2xl pb-5 text-black">
+          Yourpet<span className="text-blue-600">.</span>
+        </div>
+        <address>
+          1234 Anywhere st
+          <br />
+          NA, USA 00000
+        </address>
+        <p>info@yourpet.com</p>
+        <p>555 555-5555</p>
+      </div>
+      {
+        items.map((x, index) => (
+          <div key={index} className="flex flex-col">
+            <h1 className="font-bold pb-2 text-xl uppercase text-black">{x.title}</h1>
+            <ul>
+              {
+                x.items.map((x, index) => <li className="text-lg capitalize" key={index}>{x}</li>)
+              }
+            </ul>
+          </div>
+        ))
+      }
+      
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

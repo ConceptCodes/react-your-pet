@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import ReviewCard from "../components/ReviewCard";
 import Vet from "../components/Vet";
-import { PlayIcon, MinusIcon, ArrowRightIcon } from "@heroicons/react/solid";
+import { PlayIcon, MinusIcon, ArrowRightIcon, HeartIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 
 const services = [
@@ -168,9 +168,10 @@ export default function Home() {
               </form>
             </div>
           </section>
+          <Footer />
         </section>
+          <div className="py-4 bg-blue-200 font-bold flex items-center justify-center">Developed with <HeartIcon className="animate-pulse text-red-600 mx-2 h-5" /> by ConceptCodes </div>
       </main>
-      <Footer />
     </div>
   );
 }
